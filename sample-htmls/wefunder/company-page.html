@@ -1,0 +1,1207 @@
+<!DOCTYPE html><html controller="companies" action="show"><head>
+      <meta charset="UTF-8">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"25c9359be6","applicationID":"787193","transactionName":"cgpZRkUMClsAQxZaX1wVVlxeBhUYFllWTg==","queueTime":0,"applicationTime":739,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQMOVldVGwQIU1BbBA==",licenseKey:"25c9359be6",applicationID:"787193"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(26),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(27),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(m,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(m,[window.performance.getEntriesByType(w)]),window.performance["c"+d])try{window.performance[p](h,i,!1)}catch(t){}else try{window.performance[p]("webkit"+h,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d="learResourceTimings",l="addEventListener",p="removeEventListener",h="resourcetimingbufferfull",m="bstResource",w="resource",v="-start",g="-end",y="fn"+v,x="fn"+g,b="bstTimer",E="pushState",R=t("loader");if(!R.disabled){R.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(y,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=R.now())}),a.on(x,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,R.now()])}),c.on(y,function(t,e,n){this.bstStart=R.now(),this.bstType=n}),c.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),this.bstType])}),f.on(y,function(){this.bstStart=R.now()}),f.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),"requestAnimationFrame"])}),a.on(E+v,function(t){this.time=R.now(),this.startPath=location.pathname+location.hash}),a.on(E+g,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(m,[window.performance.getEntriesByType("resource")]),r()):l in window.performance&&(window.performance["c"+d]?window.performance[l](h,i,!1):window.performance[l]("webkit"+h,i,!1)),document[l]("scroll",o,{passive:!0}),document[l]("keypress",o,!1),document[l]("click",o,!1)}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(27),a=t(26);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||c(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(23),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(19),m=t(18),w=t(15),v=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;"string"==typeof o?n=o:"object"==typeof o&&o instanceof v?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n);var s=(""+(o&&o instanceof v&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(26),s=t(27),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],20:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(28);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],21:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],22:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[l.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),l=t("loader"),p=t(25),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(s)}},{}],23:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],24:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],25:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],26:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],27:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],28:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(26),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(20),s=t("handle"),c=t(26),f=t("ee"),u=t(24),d=t(21),l=t(17),p=l.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,w="addEventListener",v="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1211.min.js"},R=g&&y&&y[w]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(22),m[w]?(m[w]("DOMContentLoaded",o,!1),h[w]("load",r,!1)):(m[v]("onreadystatechange",i),h[v]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(27),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        
+
+
+      <script id="google-tag-manager-script" type="text/javascript">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer', 'GTM-NPF742P')
+    </script>
+
+
+
+
+
+<meta name="Description" content="Invest as little as $100 in startups and small businesses.  Wefunder is the largest Regulation Crowdfunding portal.">
+
+<title>Invest in Rasa: The first functional coffee alternative: energize with adaptogens, not caffeine! | Wefunder</title>
+
+
+<meta property="twitter:account_id" content="468423167">
+<meta name="pusher-key" content="1a6fe21b49e4893d98cb">
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="sEcnGGaKWPyYkDnfaVqbm9Rj4wCFgCXfy1sEl1e44hAXMJ631wQ1TuFYW5JdAsz0IOIUc6pq2+M+Mf1TP5PwiA==">
+
+<meta name="current_user.id">
+<meta name="current_user.admin">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+  window.FACEBOOK_APP_ID = "216076798476059";
+</script>
+
+<script>
+  window.debug_ajax = true;
+</script>
+
+<script>
+  window._gaq = window._gaq || [];
+  window._kmq = window._kmq || [];
+  window._kmk = window._kmk || [];
+  window._pq = window._pq || [];
+</script>
+
+
+
+
+  <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+      PayPI.init_host("https://paypi.wefunder.com");
+    });
+  </script>
+
+
+
+<!-- ADMIN SESSION? false -->
+          <script type="text/javascript">
+          // disabled
+          window.perf = {
+            enabled: false,
+            mark: function() { }
+          };
+        </script>
+
+
+
+
+  <script type="text/javascript">
+    perf.mark('post typekit script block');
+  </script>
+
+
+
+  <script type="text/javascript">
+    var _kmq = _kmq || [];
+  </script>
+
+  <script type="text/javascript">
+    var _pq = _pq || [ ];
+  </script>
+
+
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+      (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+      0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+      for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+
+      mixpanel.init("aec5c4f1313da460ef91ed9e5d0b9e93");
+
+        mixpanel.identify("et_9wvgINibD4yfxcRG");
+    </script>
+    <!-- end Mixpanel -->
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36308527-1']);
+      _gaq.push(['_setDomainName', 'wefunder.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      
+
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        //ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        // add tracking for display advertising
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-36308527-1', 'auto', {
+        'allowLinker': true
+      });
+
+      // handle wefunder.com / wefunder.me
+      ga('require', 'linker');
+      ga('linker:autoLink', ['wefunder.me']);
+
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript">
+      //var _errs=["5075dc66556f12ff6900ffca"];(function(a,b){a.onerror=function(){_errs.push(arguments)};
+      var _errs=["5075dc66556f12ff6900ffca"];(function(a,b){a.onerror=function(){_errs.push(arguments)};
+      var d=function(){var a=b.createElement("script"),c=b.getElementsByTagName("script")[0];
+      a.src="//d15qhc0lu1ghnk.cloudfront.net/beacon.js";a.async=!0;
+      c.parentNode.insertBefore(a,c)};a.addEventListener?a.addEventListener("load",d,!1):
+      a.attachEvent("onload",d)})(window,document);
+    </script>
+
+
+
+  
+  <!-- FACEBOOK -->
+  <meta property="fb:app_id" content="216076798476059">
+  <meta property="og:site_name" content="Rasa on Wefunder">
+  <meta property="og:title" content="Invest in Rasa: The first functional coffee alternative: energize with adaptogens, not caffeine! | Wefunder">
+  <meta property="og:url" content="https://wefunder.com/rasa">
+
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://dfon51l7zffjj.cloudfront.net/uploads/company/header_media_photo/89899/standard_cropped_0001.jpg">
+  <meta property="og:image:width" content="1225">
+  <meta property="og:image:height" content="450">
+  <meta property="og:description">
+  <meta property="description">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@wefunder">
+  <meta name="twitter:creator" content="@wefunder">
+  <meta name="twitter:title" content="Invest in Rasa: The first functional coffee alternative: energize with adaptogens, not caffeine! | Wefunder">
+  <meta name="twitter:description" content="The first functional coffee alternative: energize with adaptogens, not caffeine!
+">
+  <meta name="twitter:image" content="https://dfon51l7zffjj.cloudfront.net/uploads/company/header_media_photo/89899/standard_cropped_0001.jpg">
+
+
+<script>
+  UPLOADCARE_PUBLIC_KEY = 'ef574386a2260d9f9023';
+  document.addEventListener("DOMContentLoaded", function(event) {
+    window.Blinkloader.optimize({
+      pubkey:'ef574386a2260d9f9023',
+      fadeIn:true,
+      lazyload:true,
+      smartCompression:true,
+      responsive:true,
+      retina:true,
+      webp:true
+    });
+  });
+</script>
+
+<script type="text/javascript">
+  window.addEventListener('DOMContentLoaded', function() {
+      Cookies.set('help_token', '0', { path: '/', domain: "wefunder.com"});
+  });
+</script>
+      </head><body id="wefunder_2021" class="flex flex-col min-h-screen companies"><div data-react-class="shared/wf_user_state/wf_user_state" data-react-props="{&quot;currentUserId&quot;:&quot;&quot;,&quot;isAdmin&quot;:null}" data-react-cache-id="shared/wf_user_state/wf_user_state-0"></div>
+
+      <link rel="stylesheet" media="screen" href="https://d2to6hixdjym3d.cloudfront.net/packs/css/defaultVendors~application_2021-cf83644b.chunk.css">
+<link rel="stylesheet" media="screen" href="https://d2to6hixdjym3d.cloudfront.net/packs/css/application_2021-810a6c7f.chunk.css">
+
+        <script src="https://d2to6hixdjym3d.cloudfront.net/packs/js/runtime~application_2021-37a1c0e0a3a5b849ec2c.js" data-turbolinks-track="reload" defer="defer"></script>
+<script src="https://d2to6hixdjym3d.cloudfront.net/packs/js/defaultVendors~application_2021-0a140fc6c955bb9ef5df.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
+<script src="https://d2to6hixdjym3d.cloudfront.net/packs/js/application_2021-a09795814a7fe92ade8c.chunk.js" data-turbolinks-track="reload" defer="defer"></script>
+
+
+      <!--Fonts.  We will replace this hosted on our server at end-->
+      <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7970354/7332832/css/fonts.css">
+
+      <!--Icons.  We will replace this with something manually hosted at end-->
+      <script src="https://use.fortawesome.com/d55bc9ce.js"></script>
+
+      <!-- Always use protection -->
+      <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="5N+wmwpbs4Mg6jN6fic1YAYqRou9Gf2CVFGmioQo11VDqAk0u9XeMVkiUTdKf2IP8qux+JLzA76hO19O7APFzQ==">
+
+
+          <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-449393427"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+        gtag('config', "UA-194803148-25");
+        gtag('config', "AW-449393427");
+    </script>
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1194291280939280', {em: '', fn: '', ln: '' });
+    fbq('init', '1517510471853392', {em: '', fn: '', ln: '' } );
+    fbq('track', 'PageView', {}, {eventID: 'PageView.89899.9510780e7a92065b6990369bb0ece734.1635220751'});
+    fbq('track', 'ViewContent', {}, {eventID: 'ViewContent.89899.9510780e7a92065b6990369bb0ece734.1635220751'});
+  </script>
+
+
+  <noscript>
+    <img height="1" width="1" style="display:none" 
+      src="https://www.facebook.com/tr?id=1194291280939280&ev=PageView&noscript=1"/>
+  </noscript>
+
+    
+
+
+  	
+      	
+    <noscript id="google-tag-manager-noscript">
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPF742P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+
+
+        <a target="_blank" class="no-underline" href="https://www.google.com/chrome">
+          <div class="bg-red text-white font-medium text-xs sm:text-base hover:bg-red-500">
+            <div class="flex  px-6 py-4">
+              <div class="flex ">
+                <div class="pr-2 w-6"><span class="fa fa-warning"></span></div>
+                <div class="flex-grow ">Your browser is old and is not supported. Upgrade for better security.</div>
+                <div class="flex-grow  text-right"><span class=" absolute fa fa-arrow-right right-2 -mt-1 text-2xl"></span></div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+
+
+
+
+    
+      
+
+      <!--TOP NAVIGATION-->
+      
+    	  <header class="w-full flex  text-sm p-4  h-16 leading-8  border-b ">
+          <div class="flex-none hover:opacity-95 transition-opacity duration-500 -mt-0.5"> 
+            <a href="/home" aria-label="Wefunder Logo">
+              <img class="-mt-2 h-8 bg-cover hidden md:inline-block" alt="" src="https://wefunder-production.s3.amazonaws.com/2021/logo.svg">
+            </a>
+          </div>
+
+          <div class="flex-none md:flex-grow md:pl-8 xl:pl-14 w-28 md:w-auto">
+            <ul class="flex md:space-x-6 xl:space-x-12">
+              <li class="hidden md:inline-block wf-link-nav"><a href="/explore">Explore</a></li>
+              <div data-react-class="shared/layout/wf_navigation_search/wf_navigation_search" data-react-props="{&quot;disableAnimation&quot;:false}" data-react-cache-id="shared/layout/wf_navigation_search/wf_navigation_search-0" style="width:100%"></div>
+            </ul>
+          </div>
+
+          <div class="flex-grow">
+            <center class="md:hidden ">
+              <a href="/" aria-label="Wefunder Logo">
+                <img class="-m-1  h-10 bg-cover text-center " src="https://wefunder-production.s3.amazonaws.com/2021/w-blue.svg">
+              </a>
+            </center>
+          </div>
+
+          <div class="flex-none w-28 md:w-auto">
+            <div data-react-class="views/user_menu/user_menu" data-react-props="{}" data-react-cache-id="views/user_menu/user_menu-0"></div>
+            <div class="" id="user_nav_end">
+              <ul class="flex wf-link-nav lg:pr-4 float-right md:clear-both">
+                <li class="hidden md:inline-block"><a href="/raise">Raise <span class="hidden lg:inline-block">Funding</span></a></li>
+                <li class="hidden ml-8 md:inline-block"><a href="https://help.wefunder.com/">FAQ</a></li>
+                <li class=" mx-2 md:h-8 md:border-r md:mx-8 "></li>
+                  <li><a class="" href="/login">Login</a></li>
+                  <li><a class="ml-4 hidden md:inline-block " href="/signup">Signup </a></li>
+
+                  <div data-react-class="shared/wf_modal/wf_modal" data-react-props="{&quot;defaultSize&quot;:&quot;md&quot;,&quot;customModalTriggerHtml&quot;:&quot;\n                      \u003cspan class=\&quot;fa fa-menu  ml-4 cursor-pointer md:hidden text-4xl -mt-1 js-open-mobile-menu\&quot;\u003e\u003c/span\u003e\n                    &quot;,&quot;html&quot;:&quot;\n                      \u003cdiv id=\&quot;mobile-menu\&quot; class=\&quot;bg-white h-screen border-blue-200 text-sm\&quot;\u003e\n                        \u003cdiv class=\&quot;flex p-4  h-16 \&quot;\u003e\n                          \u003cdiv class=\&quot;flex-grow\&quot;\u003e\n                            \u003ccenter\u003e\n                              \u003cimg class=\&quot;-m-2  h-10 w-30 bg-cover text-center\&quot; alt=\&quot;\&quot; src=\&quot;https://wefunder-production.s3.amazonaws.com/2021/w-blue.svg\&quot;\u003e\n                            \u003c/center\u003e\n                          \u003c/div\u003e\n                        \u003c/div\u003e\n\n                        \u003cul class=\&quot;wf-link-nav p-4 pt-0\&quot;\u003e\n                          \u003cli class=\&quot;p-5 border-b border-t\&quot;\u003e\u003ca style=\&quot;color: rgba(88, 88, 88, 1)\&quot; href=\&quot;/explore\&quot;\u003eExplore\u003c/a\u003e\u003c/li\u003e\n                          \u003cli class=\&quot;p-5 border-b\&quot;\u003e\u003ca style=\&quot;color: rgba(88, 88, 88, 1)\&quot; href=\&quot;https://help.wefunder.com/\&quot;\u003eFAQ\u003c/a\u003e\u003c/li\u003e\n                          \u003cli class=\&quot;p-5 border-b\&quot;\u003e\u003ca style=\&quot;color: rgba(88, 88, 88, 1)\&quot; href=\&quot;/raise\&quot;\u003eRaise Funding\u003c/a\u003e\u003c/li\u003e\n                          \u003cli class=\&quot;p-5 border-b\&quot;\u003e\u003ca style=\&quot;color: rgba(88, 88, 88, 1)\&quot; href=\&quot;/login\&quot;\u003eLogin\u003c/a\u003e\u003c/li\u003e\n                          \u003cli class=\&quot;p-5 border-b\&quot;\u003e\u003ca style=\&quot;color: rgba(88, 88, 88, 1)\&quot; href=\&quot;/signup\&quot;\u003eSignup\u003c/a\u003e\u003c/li\u003e\n                        \u003c/ul\u003e\n                      \u003c/div\u003e\n                    &quot;}" data-react-cache-id="shared/wf_modal/wf_modal-0"></div>
+
+              </ul>
+            </div>
+          </div>
+
+    	  </header>
+   
+
+
+  	  <main id="main-content" class="flex-grow" style="min-height:100px;">
+  	    
+
+    
+
+
+
+
+
+
+
+<!-- END OF SHARING -->
+
+<div id="company-profile-2021">
+  <div class="flex flex-wrap max-w-screen-xl mx-auto relative">
+    <!-- NAME/TAGLINE/SHARE -->
+    <div class="flex-grow py-4 sm:py-8 order-2 lg:order-1 max-w-2xl lg:max-w-screen-xl mx-auto">
+      <div class="fluid-container">
+        <div class="flex">
+          <div class="flex-grow max-w-screen-md">
+
+            <h1 class="text-base md:text-lg  text-coolgray-800 uppercase tracking-wider pr-1 sm:pr-0">
+              <span class="font-light">Invest in</span> 
+              <b class="inline-block">Rasa</b>
+            </h1>
+              <h2 class="text-xl sm:text-2xl md:text-3xl mt-2 md:mt-4 font-medium pr-2 text-coolgray-900">
+                  The first functional coffee alternative: energize with adaptogens, not caffeine!
+
+              </h2>
+          </div>
+            <div class="flex-grow text-right md:inline-block">
+              <div data-react-class="shared/wf_share/wf_share" data-react-props="{&quot;subText&quot;:&quot;Help Rasa get the funding they need&quot;}" data-react-cache-id="shared/wf_share/wf_share-0"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- DESKTOP SIDEBAR - ALSO USED IN MOBILE-->
+    <div id="js-sidebar" class="hidden flex-grow  relative order-3 lg:absolute lg:right-4 lg:pl-6 xl:pl-12">
+      <div id="js-sidebar-height" class="lg:border-2 xl:border-none  xl:shadow-md coolgray overflow-y-scroll">
+          <div data-react-class="shared/vendor/provide_jquery" data-react-props="{}" data-react-cache-id="shared/vendor/provide_jquery-0"></div>
+
+  <div class="p-4">
+
+
+      <div class="text-green text-sm sm:text-xs mb-2 "><span class="fa fa-trophy"></span> <span class="font-medium ">FIRST GOAL HIT</span> (You can still invest)</div>
+      <div class="wf-progress-bar">
+        <div class="filled" style="width:100%"></div>
+      </div>
+
+        <h3 class="text-xl font-medium sm:text-4xl sm:font-normal mt-4 text-coolgray-900">$1,728,774</h3>
+    <div class="wf-text-dimmer mt-1 text-sm mb-8">
+              raised from 826 investors
+    </div>
+
+
+
+
+
+
+
+
+  <div>
+    <div class="wf-form-row-flex hidden sm:flex">
+      <div class="wf-form-label-container w-1/2">
+        <p class="font-medium text-coolgray-900">INVEST</p>
+        <p class="wf-text-dimmer text-sm mt-0.5">min $100</p>
+      </div>
+      
+      <div data-react-class="company_profile/wf_perks_display/wf_perks_display" data-react-props="{&quot;companyId&quot;:89899,&quot;companyName&quot;:&quot;Rasa&quot;,&quot;perkList&quot;:[{&quot;id&quot;:44183,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:250,&quot;description&quot;:&quot; It’s totes a tote! Stay tuned to your email, because when these beauties launch next month, yours is FREE! &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.103Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.103Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false},{&quot;id&quot;:44184,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:500,&quot;description&quot;:&quot; Enjoy 25% off Rasa subscriptions...for life. &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.151Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.151Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false},{&quot;id&quot;:44185,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:2500,&quot;description&quot;:&quot; Get 50% off The Whole Rasa Bundle—every permanent 8 oz blend at your door (270 servings of life-changing goodness!) for $160 off retail. Take a look. &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.200Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.200Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false}],&quot;customClass&quot;:&quot;hidden sm:block&quot;}" data-react-cache-id="company_profile/wf_perks_display/wf_perks_display-0"></div>
+    </div>
+
+    <div class="hidden sm:block">
+        <div data-react-class="company_profile/wf_invest_button/wf_invest_button" data-react-props="{&quot;companySlug&quot;:&quot;rasa&quot;,&quot;minPurchase&quot;:&quot;$100&quot;,&quot;maxPurchase&quot;:&quot;$9&quot;,&quot;ttw&quot;:false,&quot;Id&quot;:&quot;2021-invest-button&quot;}" data-react-cache-id="company_profile/wf_invest_button/wf_invest_button-0"></div>
+        <div data-react-class="shared/wf_company_follow/wf_company_follow" data-react-props="{&quot;companyId&quot;:89899,&quot;loggedInState&quot;:false,&quot;initialState&quot;:null,&quot;buttonSize&quot;:&quot;normal&quot;,&quot;customClass&quot;:&quot;w-full text-sm&quot;}" data-react-cache-id="shared/wf_company_follow/wf_company_follow-0"></div>
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <div class="wf-divider mt-1"></div>
+  
+  <div class="px-4 py-5 cursor-pointer wf-animate-transition hover:bg-gray-50 relative select-none" onclick="$('.js-show-terms').toggle(); if ($('.js-terms-angle').hasClass('fa-angle-down')) { $('.js-terms-angle').removeClass('fa-angle-down').addClass('fa-angle-up') } else { $('.js-terms-angle').addClass('fa-angle-down').removeClass('fa-angle-up')} checkSidebarHeight();  ">
+  
+
+        <div class="js-terms-angle fa fa-angle-down absolute text-sm sm:text-xs right-3 text-coolgray-700"></div>
+
+      <div class="wf-text-dimmer text-sm sm:text-xs font-medium">INVESTMENT TERMS</div>
+
+      <div class=" text-sm sm:text-xs mt-4 ">
+        
+        <div class="leading-5"><span class="wf-col-gray-800 font-medium">$25M</span><span class="ml-1 mr-1 wf-text-dimmer">pre-money valuation</span> <span class="border-r ml-1 mr-3 h-6"></span> <span class="wf-col-gray-800 font-medium whitespace-nowrap">Priced Round</span></div>
+
+             <div class=" mt-3 flex">
+              <span class="flex-none wf-link-title fa fa-gift mt-0.5 mr-1"></span> 
+              
+
+              <div class="flex-none">
+                <div data-react-class="company_profile/wf_investor_perks/wf_investor_perks" data-react-props="{&quot;groupCount&quot;:3,&quot;companyId&quot;:89899,&quot;companyName&quot;:&quot;Rasa&quot;,&quot;perkList&quot;:[{&quot;id&quot;:44183,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:250,&quot;description&quot;:&quot; It’s totes a tote! Stay tuned to your email, because when these beauties launch next month, yours is FREE! &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.103Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.103Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false},{&quot;id&quot;:44184,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:500,&quot;description&quot;:&quot; Enjoy 25% off Rasa subscriptions...for life. &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.151Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.151Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false},{&quot;id&quot;:44185,&quot;fundraise_id&quot;:46848,&quot;qualifying_amount&quot;:2500,&quot;description&quot;:&quot; Get 50% off The Whole Rasa Bundle—every permanent 8 oz blend at your door (270 servings of life-changing goodness!) for $160 off retail. Take a look. &quot;,&quot;instructions&quot;:null,&quot;created_at&quot;:&quot;2021-10-18T20:51:02.200Z&quot;,&quot;updated_at&quot;:&quot;2021-10-18T20:51:02.200Z&quot;,&quot;no_carry&quot;:false,&quot;algorithm&quot;:&quot;threshold&quot;,&quot;number_of_claims&quot;:null,&quot;number_of_claims_used&quot;:null,&quot;investment_volume&quot;:null,&quot;investment_volume_used&quot;:null,&quot;appointment_scheduling_email&quot;:null,&quot;requires_shipping&quot;:false,&quot;redeemable_by_code&quot;:false,&quot;requires_perk_request&quot;:false,&quot;requesting_begins_at&quot;:null,&quot;requesting_ends_at&quot;:null,&quot;redeeming_is_active&quot;:false,&quot;order&quot;:0,&quot;fund_pro_rata&quot;:false}]}" data-react-cache-id="company_profile/wf_investor_perks/wf_investor_perks-0"></div> 
+              </div>
+              <span class="wf-text-dimmer">
+              $250, 
+
+              $500, 
+
+              $2.5K
+            </span>
+              
+            </div>
+
+        <div class="js-show-terms hidden">
+
+
+              <p class="wf-text-dimmer mt-4 leading-5">If you invest, you're betting Rasa will be worth more than $25M in the future.</p>
+                <br><a target="_blank" onclick="event.stopPropagation();" href="https://help.wefunder.com/contracts/304787-priced-preferred-stock" class="wf-link-inline">
+                  Learn more about equity fundraises
+                </a>
+   
+          
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  <div class="wf-divider"></div>
+
+  <div class="px-4 py-4 pb-6 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-50 relative select-none" onclick="$('.js-show-lead').toggle(); if ($('#js-truncate').hasClass('line-clamp-2')) { $('#js-truncate').removeClass('line-clamp-2') } else { $('#js-truncate').addClass('line-clamp-2')}; if ($('.js-lead-angle').hasClass('fa-angle-down')) { $('.js-lead-angle').removeClass('fa-angle-down').addClass('fa-angle-up') } else { $('.js-lead-angle').addClass('fa-angle-down').removeClass('fa-angle-up')}; checkSidebarHeight();  ">
+    <div class="js-lead-angle fa fa-angle-down absolute text-sm sm:text-xs right-3 text-coolgray-700"></div>
+    <div class="wf-text-dimmer text-sm sm:text-xs font-medium">LEAD INVESTOR</div>
+    <div class="flex mt-4">
+
+      <div class="flex-none w-12">
+        <span data-react-class="shared/wf_user_follow_tooltip/wf_user_follow_tooltip" data-react-props="{&quot;user_id&quot;:1610088,&quot;role_id&quot;:1991639,&quot;__html&quot;:&quot;\u003cimg class=\&quot;wf-avatar-xs flex-none mr-2\&quot; src=\&quot;//d2qbf73089ujv4.cloudfront.net/uploads/user/avatar/1610088/medium_blob.jpg\&quot; /\u003e&quot;}" data-react-cache-id="shared/wf_user_follow_tooltip/wf_user_follow_tooltip-0"></span>
+      </div>
+
+      <div class="flex-grow text-sm sm:text-xs relative ml-1">
+        <span data-react-class="shared/wf_user_follow_tooltip/wf_user_follow_tooltip" data-react-props="{&quot;user_id&quot;:1610088,&quot;role_id&quot;:1991639,&quot;__html&quot;:&quot;\u003cspan class='wf-col-gray-800 font-medium'\u003eDaniel Scrivner\u003c/span\u003e&quot;}" data-react-cache-id="shared/wf_user_follow_tooltip/wf_user_follow_tooltip-0"></span>
+         <span class="ml-2 wf-text-dimmer font-medium">Founder &amp; Managing Partner of Blackletter Capital</span>
+        <div id="js-truncate" class="line-clamp-2  wf-text-dimmer mt-2 break-anywhere leading-5">It's truly an honor to lead this round. While I've invested in more than a hundred early-stage companies, I've never led a round before personally.
+Why now? Because I believe deeply in what Rasa is building. I love the care and craftsmanship they put into everything that they do. I love their approach to sourcing ingredients and their incredibly high standards. This is a deeply mission and values driven company.
+Over the years, I've looked at a lot of businesses and teams. And I can tell you that Rasa is special.
+My wife and I first found Rasa a few years ago on the shelf of our local co-op. Now I drink 2-3 cups a day—typically elderberry, cacao, or super happy sunshine. My energy is smooth throughout the day and I feel more in the flow and relaxed while working.
+Rasa is building where culture is heading. We are in a period of an "alternatives" explosion. No more almond milk, now it's oat milk. Most people have tried something gluten free. Everywhere you look, we're questioning everything and new players are taking a substantial share of that market.
+The same thing has been happening with coffee and tea. Every food is becoming a "functional food." Rasa is building right into that trend and they have the best product—bar none. Feedback from customers is insane. The sense of community they've built around their product is powerful. And they're just getting started.
+This round will enable them to take the incredible focus, craftsmanship, and care that they put into their product into every aspect of their business. To scale into new product lines, introduce more exclusive blends, and take their business to an entirely new level.
+I believe they can pull it off</div>
+        <div class="js-show-lead hidden">
+          <br>
+          <span class="text-coolgray-800 font-medium">Invested $30,000 this round </span>
+          <br>
+          <br>
+          <a href="https://help.wefunder.com/#/leads" target="_blank" onclick="event.stopPropagation();" class="wf-link-inline mt-5">Learn about Lead Investors</a>
+          <br><br>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+        <div class="wf-divider lg:hidden"></div>
+      </div>
+    </div>
+
+    <!-- COVER PHOTO / VIDEO-->
+    <div class="flex-grow order-1 w-full lg:order-2 ">
+      <div class="fluid-container px-0 lg:px-4">
+        <div class="size-video">
+          <div class="flex flex-col-reverse lg:flex-col">
+            <div id="js-video">
+              <div class="aspect-ratio-16/9 relative bg-coolgray-900">
+                <div class="absolute top-0 bottom-0 left-0 right-0"> 
+                  <div id="js-pitch-video" class="">
+                    <div data-react-class="shared/wf_video/wf_video" data-react-props="{&quot;video&quot;:&quot;https://wefunder.wistia.com/medias/nfs2tccscf&quot;,&quot;cover&quot;:&quot;//dfon51l7zffjj.cloudfront.net/uploads/company/header_media_photo/89899/standard_cropped_0001.jpg&quot;,&quot;cover350&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company/header_media_photo/89899/small_cropped_0001.jpg&quot;,&quot;cover1000&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company/header_media_photo/89899/xl_cropped_0001.jpg&quot;,&quot;cover1264&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company/header_media_photo/89899/xxl_cropped_0001.jpg&quot;,&quot;enablePip&quot;:true}" data-react-cache-id="shared/wf_video/wf_video-0"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- TAGS / LINKS UNDER VIDEO -->
+    <div class="flex-grow order-last lg:order-3 max-w-2xl lg:max-w-screen-xl mx-auto">
+      <div class="fluid-container coolgray">
+        <div class="size-video">
+          <div data-react-class="shared/vendor/provide_jquery" data-react-props="{}" data-react-cache-id="shared/vendor/provide_jquery-0"></div>
+<div class="flex  wf-text-dimmer text-xs py-2 border-b -ml-2 lg:ml-0 lg:px-1 pb-3 flex-wrap md:flex-nowrap">
+
+  <div class="justify-center mt-1.5 p-2 ">  
+      <a target="_blank" class="wf-link-inline-muted" href="https://wearerasa.com/">wearerasa.com</a>
+  </div>
+  <div class="whitespace-nowrap mt-1.5 p-2">
+      Boulder
+           CO
+  </div>
+  <div class="text-xl mt-1 whitespace-nowrap p-2 text-left flex space-x-4">
+      <a target="_blank" href="https://www.facebook.com/wearerasa/" class="fa fa-facebook-square hover:text-blue">
+      </a>
+      <a target="_blank" href="https://www.instagram.com/wearerasa/" class="fa fa-instagram hover:text-blue">
+      </a>
+  </div>
+
+  <div class="flex-grow p-2 ">
+    <div class="text-left md:text-right md:mt-0 ">
+        <div class="space-y-1">
+              <a target="_blank" class="wf-tag wf-tag-sm mt-0.5" href="/explore/food">Food</a>
+              <a target="_blank" class="wf-tag wf-tag-sm mt-0.5" href="/explore/pbc_and_b_corps">PBC and B Corps</a>
+              <a target="_blank" class="wf-tag wf-tag-sm mt-0.5" href="/explore/female_founder">Female Founder</a>
+              <a target="_blank" class="wf-tag wf-tag-sm mt-0.5" href="/explore/social_impact">Social Impact</a>
+              <a target="_blank" class="wf-tag wf-tag-sm mt-0.5" href="/explore/health_and_fitness">Health and Fitness</a>
+        </div>
+      <!-- tags.exists? -->
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fluid-container mb-12 xl:mb-48">
+    <div class="w-full lg:w-[69.5%] mx-auto lg:ml-0">
+        <!-- TABLET AND DESKTOP MENU -->
+        <div id="js-start-menu"></div>
+
+        <div id="js-desktop-menu" class="hidden sm:block wf-tab-container-between mt-8 w-full z-50">
+          <button id="overview-tab" onclick="tabSwitch(this)" class="wf-tab-sm outline-none px-0.5 xl:px-1 ml-0 wf-tab-active wf-tab-underline ">
+            Overview
+          </button>
+
+          <button id="details-tab" onclick="tabSwitch(this)" class="wf-tab-sm outline-none px-0.5 xl:px-1  ">
+            Details
+          </button>
+
+          <button id="updates-tab" onclick="tabSwitch(this)" class="wf-tab-sm outline-none px-0.5 xl:px-1 ">
+              <div class="flex">
+                <div>Updates</div>
+                  <div class="wf-tag-l wf-tag-l-sm ml-1 hidden lg:inline-block">4</div>
+              </div>
+          </button>
+
+          <button id="buzz-tab" onclick="tabSwitch(this)" class="wf-tab-sm outline-none px-0.5 xl:px-1 ">
+              <div class="flex">
+                <div>What People Say</div>
+                  <div class="wf-tag-l wf-tag-l-sm ml-1 hidden lg:inline-block">432</div>
+              </div>
+          </button>
+
+          <button id="ask-tab" onclick="tabSwitch(this)" class="wf-tab-sm outline-none px-0.5 xl:px-1 ">
+            <div class="flex">
+              <div>Ask <span class="hidden xl:inline-block">a</span> Question</div>
+                <div class="wf-tag-l wf-tag-l-sm ml-1 hidden lg:inline-block">18</div>
+          
+
+          <div data-react-class="company_profile/wf_profile_content_controller/wf_profile_content_controller" data-react-props="{&quot;companySlug&quot;:&quot;rasa&quot;,&quot;tab&quot;:&quot;overview&quot;}" data-react-cache-id="company_profile/wf_profile_content_controller/wf_profile_content_controller-0"></div>
+
+        </div>
+        <!-- HIGHTLIGHTS / TEAM/ STORY -->
+        <div id="profile-content-container">
+            <div data-react-class="shared/vendor/provide_jquery" data-react-props="{}" data-react-cache-id="shared/vendor/provide_jquery-0"></div>
+<h3 id="js-highlights" class="h4 mt-16 mb-8">Highlights</h3>
+
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">1</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">⚡️$5M revenue run-rate, &gt;500% YOY subscription growth </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">2</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">⭐️4.7 average rating, 10M+ cups sold, 100K customers. </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">3</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">😎Founder on Forbes Next 1000 list, former Sr Advisor @ Richard Branson’s Carbon War Room, 1 prior exit </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">4</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">🥾 $10M cumulative revenue, GAAP profitable last year, bootstrapped up to now. </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">5</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">☕ Nearly triple-digit YOY growth against gargantuan $465B global coffee market. </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">6</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">📈 Aiming to 10x the business over the next five years. </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">7</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">🌿 Co-founder is a clinical herbalist, adaptogen expert, &amp; was Sr Herb Buyer @ Celestial Seasonings. </div>
+    </div>
+    <div class="flex mb-10">
+      <div class="sm:w-10 wf-number-circle" style="line-height:38px">8</div>
+      <div class="flex-grow ml-4 flex align-middle items-center text-sm md:text-base">🙌  Public Benefit Corp for sustainable supply chain, compostable packaging, &amp; changing lives. </div>
+    </div>
+
+
+
+
+<hr>
+<h3 class="h4 mb-8">Our Team</h3>
+
+<div class="flex flex-row flex-wrap">
+
+    <div class="flex w-full mb-12 ">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:1926235,&quot;userBio&quot;:&quot;Before founding Rasa, Lopa was a 2x co-founder in sustainable energy (with 1 exit), \u0026 spoke to 1,400 people at TEDxBerkeley at age 28. As a mom to 2 young boys, she proves that attachment parenting \u0026 being a dynamic CEO are not mutually exclusive.&quot;,&quot;userId&quot;:1514444,&quot;userName&quot;:&quot;lopavandermersch&quot;,&quot;userFullName&quot;:&quot;Lopa Van Der Mersch&quot;,&quot;userTitle&quot;:&quot;Founder \u0026 CEO&quot;,&quot;userAvatar&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company_role/custom_photo/1926235/square_cropped_unnamed__1_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+              <div class="wf-text-userquote mt-6 break-anywhere leading-6">
+                You could say I had my "own personal 2020" in 2015—we're talking "leaving a cult, death in the family, 2 emergency surgeries, a move across the country, &amp; a huge falling out with my family" levels of stress. And then I had a baby. Most moms drink coffee to get through, but my nervous system was fried and coffee only made it worse.
+              </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="flex w-full mb-12 ">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:2000695,&quot;userBio&quot;:&quot;Before joining us, Ben helped lead Celestial Seasonings botanical sourcing group, buying over 10 million lbs of herbs/year. He has an MSc from Maryland University of Integrative Health \u0026 is the creative \u0026 scientific genius behind Rasa’s formulations.&quot;,&quot;userId&quot;:1613470,&quot;userName&quot;:&quot;benlevine2&quot;,&quot;userFullName&quot;:&quot;Ben LeVine&quot;,&quot;userTitle&quot;:&quot;Co-Founder \u0026 Chief Herbalist&quot;,&quot;userAvatar&quot;:&quot;//dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/2000695/square_cropped_unnamed__3_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="flex w-full mb-12 ">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:2000698,&quot;userBio&quot;:&quot;Erik drives the Rasa bus, supported by his experience in Fortune 100 companies \u0026 start-ups that hit 9-digits in 5 years. His MSc in Eng \u0026 Mgmt + MBA in Supply Chain Mgmt helps, too! He’s a triathlete with a personal goal of climbing Everest by 2030.&quot;,&quot;userId&quot;:1495079,&quot;userName&quot;:&quot;eriksirnes&quot;,&quot;userFullName&quot;:&quot;Erik Sirnes&quot;,&quot;userTitle&quot;:&quot;General Manager&quot;,&quot;userAvatar&quot;:&quot;//dfon51l7zffjj.cloudfront.net/uploads/company_role/custom_photo/2000698/square_cropped_unnamed__4_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="flex w-full mb-12 hidden js-unhide-team">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:2000332,&quot;userBio&quot;:&quot;As a creative pro with \u003e25 years in a range of creative roles—from branding Kion Coffee to owning an SF agency to Executive Creative Director of Gaia—Ben is essential to positioning, strategy, \u0026 reach of Rasa's brand. And, he makes us look goooood.&quot;,&quot;userId&quot;:1613403,&quot;userName&quot;:&quot;benlovejoy2&quot;,&quot;userFullName&quot;:&quot;Ben Lovejoy&quot;,&quot;userTitle&quot;:&quot;Brand Director&quot;,&quot;userAvatar&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company_role/custom_photo/2000332/square_cropped_unnamed__2_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="flex w-full mb-12 hidden js-unhide-team">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:2000706,&quot;userBio&quot;:&quot;Formerly an eCommerce Senior Manager at NBCUniversal, Leah brings her razor-sharp mind and experience in forecasting, inventory management and analytics to drive data-based strategic decisions across Rasa's entire organization.  &quot;,&quot;userId&quot;:1511511,&quot;userName&quot;:&quot;leahgidwani&quot;,&quot;userFullName&quot;:&quot;Leah Gidwani&quot;,&quot;userTitle&quot;:&quot;Operations Director&quot;,&quot;userAvatar&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company_role/custom_photo/2000706/square_cropped_unnamed__5_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    <div class="flex w-full mb-12 hidden js-unhide-team">
+      <div class="flex-grow flex ">
+        <div class="flex flex-col justify-center">
+
+
+          <div data-react-class="company_profile/wf_team_bio/wf_team_bio" data-react-props="{&quot;id&quot;:2000712,&quot;userBio&quot;:&quot;Former Sales Manager for Africa's largest private dairy \u0026 a Sales Trainer at Gillette, Veronica brings decades of experience to Rasa's DTC \u0026 B2B departments—approaching each interaction as a sales opportunity, while building genuine relationships.&quot;,&quot;userId&quot;:1613439,&quot;userName&quot;:&quot;veronicaferreira&quot;,&quot;userFullName&quot;:&quot;Veronica Ferreira&quot;,&quot;userTitle&quot;:&quot;Customer Relations Manager&quot;,&quot;userAvatar&quot;:&quot;//d2qbf73089ujv4.cloudfront.net/uploads/company_role/custom_photo/2000712/square_cropped_unnamed__6_.jpg&quot;,&quot;userCanEdit&quot;:null}" data-react-cache-id="company_profile/wf_team_bio/wf_team_bio-0"></div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+
+    </div></div></button><button class="wf-btn-blue-o wf-btn-sm" form-c-screenshot-click="true" onclick="$(this).hide(); $('.js-unhide-team').removeClass('hidden'); setPosVars()">see more</button>
+</div>
+
+
+
+  <hr>
+  <h3 class="h4 mb-8">
+      Why Rasa?
+  </h3>
+  <div class="prose md:prose-lg js-story break-anywhere">
+    <figure><img loading="lazy" ucare-src="https://ucarecdn.com/0f8d6bd6-6a07-4d88-82ae-0d22e48ef82e/-/preview/" data-image="0f8d6bd6-6a07-4d88-82ae-0d22e48ef82e" src="https://ucarecdn.com/0f8d6bd6-6a07-4d88-82ae-0d22e48ef82e/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Rasa is a Superfunctional morning brew of adaptogens that clears your mind with calm, jitter-free energy, sharpens your focus, and helps you be better at handling stress by balancing your neurochemical and emotional stress response. </p><p>It’s a robust, delicious, science-backed morning ritual: boom.</p><p>Doesn’t that sound like a better way to start your day?</p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/086d6908-99c7-4a18-9df7-9e5eac7163db/-/preview/" data-image="086d6908-99c7-4a18-9df7-9e5eac7163db" src="https://ucarecdn.com/086d6908-99c7-4a18-9df7-9e5eac7163db/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/4844d0ff-4aa3-4adb-af82-ebf9ddec440f/-/preview/" data-image="4844d0ff-4aa3-4adb-af82-ebf9ddec440f" src="https://ucarecdn.com/4844d0ff-4aa3-4adb-af82-ebf9ddec440f/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>The SuperFunctional part of Rasa comes from Adaptogens.&nbsp;Adaptogens energize and nourish, and have been used for millennia to restore balance to the body. More balance means you have more stress resilience, stronger immune system, better libido, sunnier moods, and more energy to be your epic self. Rasa blends pack 1,000-10,000 mg of these amazing herbs per serving.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/d9098a6c-248c-42b7-bdfe-e67de45861d5/-/preview/" data-image="d9098a6c-248c-42b7-bdfe-e67de45861d5" src="https://ucarecdn.com/d9098a6c-248c-42b7-bdfe-e67de45861d5/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/57af4350-ab0e-4726-bb51-34d7617e4b2a/-/preview/" data-image="57af4350-ab0e-4726-bb51-34d7617e4b2a" src="https://ucarecdn.com/57af4350-ab0e-4726-bb51-34d7617e4b2a/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Each day comes with a finite supply of energy, and coffee jolts our systems into motion by blocking adenosine (the chemical that makes you feel sleepy) from binding to receptors. As a result, you don’t feel sleepy...until the caffeine wears off (hellloooo afternoon crash!)<br></p><p>Infamously addictive, side effects of caffeine include anxiety, tremors, restlessness, and trouble sleeping. </p><p>If you’re a caffeine junkie, you’re not alone. A staggering 64% of American adults rely on the mean bean to get through their day. But the tides are turning...</p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/12b53d1e-4ba6-41e6-a7df-3ef0df614435/-/preview/" data-image="12b53d1e-4ba6-41e6-a7df-3ef0df614435" src="https://ucarecdn.com/12b53d1e-4ba6-41e6-a7df-3ef0df614435/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/bf32acab-96bb-4d16-9339-cc8337802f5c/-/preview/" data-image="bf32acab-96bb-4d16-9339-cc8337802f5c" src="https://ucarecdn.com/bf32acab-96bb-4d16-9339-cc8337802f5c/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>After our founder and CEO, Lopa, went through a series of soap opera-worthy events in the year 2015—including leaving a cult, the death of a loved one, emergency surgeries, a cross-country move, and a dramatic falling-out with her family—she was understandably exhausted.<br></p><p>And then she added her first baby to the mix.</p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/6ae08298-aced-4583-9998-d7c1823a06e2/-/preview/" data-image="6ae08298-aced-4583-9998-d7c1823a06e2" src="https://ucarecdn.com/6ae08298-aced-4583-9998-d7c1823a06e2/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>“Coffee was a dead end for what I was going through. My nervous system was fried—overstimulated and depleted. Coffee only made it worse. And I tried the available alternatives, but they lacked the delicious flavor, functional benefits, and energy support I craved and knew was possible.”</p><p>So what’s a burned out but remarkably resourceful mom to do when faced with a life without coffee, and without the prospect of a promising alternative?</p><p>Create one herself, obvs.</p><p>She partnered with an herbalist to create the 12-herb Original blend, and hard-launched Rasa in April 2018. </p><p>Under the guidance of our Chief Herbalist and co-founder (who has read over 100 peer-reviewed papers in the formulation process), our line has grown to 9 products: Original, Cacao, Dirty, Bold, Calm, Supper Happy Sunshine, Spicy Rose Cacao, Well, Well, Wellderberry, and our adaptogenic creamer, Créme de la Creamer.</p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/0f7e6c4c-847d-41fd-a59b-0159e3f8f0b9/-/preview/" data-image="0f7e6c4c-847d-41fd-a59b-0159e3f8f0b9" src="https://ucarecdn.com/0f7e6c4c-847d-41fd-a59b-0159e3f8f0b9/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/c465e8fc-197b-423f-95e1-490e2b6a7f31/-/preview/" data-image="c465e8fc-197b-423f-95e1-490e2b6a7f31" src="https://ucarecdn.com/c465e8fc-197b-423f-95e1-490e2b6a7f31/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>From a tired mama elbow-deep blending herbs in her kitchen, to a small team operating out of her garage...to the unstoppable success Rasa is enjoying today, we’ve proven our appeal and staying power as a functional and nourishing alternative to coffee, in a market craving change. We’re ready to help the world kick their caffeinated habits and cultivate Energy Integrity™ using sustainable, science-backed, adaptogen-based deliciousness.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/fe9cdc9e-1338-4931-8c0a-6ab56d9923a5/-/preview/" data-image="fe9cdc9e-1338-4931-8c0a-6ab56d9923a5" src="https://ucarecdn.com/fe9cdc9e-1338-4931-8c0a-6ab56d9923a5/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/5e55dafb-11e3-4c2b-843a-7e5eb789fe42/-/preview/" data-image="5e55dafb-11e3-4c2b-843a-7e5eb789fe42" src="https://ucarecdn.com/5e55dafb-11e3-4c2b-843a-7e5eb789fe42/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Besides a veritable crapton of hard work, we’ve had nearly triple-digit YoY growth because we’ve taken 4 major trends and rolled them into one, in order to take on the behemoth global coffee market. With your support we are confident we can continue this growth.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/ab935aaf-f1be-4361-ac1f-e4c516e78b16/-/preview/" data-image="ab935aaf-f1be-4361-ac1f-e4c516e78b16" src="https://ucarecdn.com/ab935aaf-f1be-4361-ac1f-e4c516e78b16/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/580bbbb6-3fbb-452c-8850-cddf97e6aad3/-/preview/" data-image="580bbbb6-3fbb-452c-8850-cddf97e6aad3" src="https://ucarecdn.com/580bbbb6-3fbb-452c-8850-cddf97e6aad3/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Our tireless commitment to only sourcing the best herbs and mushrooms in ways that empower our growers keeps our supply chain sustainable, ethical, and unparalleled. 48 botanicals sourced from 15 countries makes Rasa’s proprietary blends unlike any other product on the market today.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/43fa4242-9182-4c8b-8594-8620f07cf46a/-/preview/" data-image="43fa4242-9182-4c8b-8594-8620f07cf46a" src="https://ucarecdn.com/43fa4242-9182-4c8b-8594-8620f07cf46a/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/38b1acbf-62ce-422c-916d-590f81ed1d60/-/preview/" data-image="38b1acbf-62ce-422c-916d-590f81ed1d60" src="https://ucarecdn.com/38b1acbf-62ce-422c-916d-590f81ed1d60/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>By striving to source only ethical and sustainable ingredients, and working toward re-investing in our suppliers and their livelihoods, our products have a huge impact on the lives of the hard-working people who nurture and grow their botanicals to be worthy of our exceptional blends.<br></p><p>In service of our values, we have incorporated as a Public Benefit Corporation. As a PBC, we are legally bound to pursue a public benefit above and beyond a pure profit motive. Our stated mission is "Sourcing sustainable herbs from traditional growing regions and promoting quality herbal education.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/571b57a5-d118-493a-bcaf-8f57074a92a6/-/preview/" data-image="571b57a5-d118-493a-bcaf-8f57074a92a6" src="https://ucarecdn.com/571b57a5-d118-493a-bcaf-8f57074a92a6/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/dc93ab8c-68b9-4bf1-93ed-109ea46e1c06/-/preview/" data-image="dc93ab8c-68b9-4bf1-93ed-109ea46e1c06" src="https://ucarecdn.com/dc93ab8c-68b9-4bf1-93ed-109ea46e1c06/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Fans are absolutely RAVING about the taste and benefits of adding Rasa to their daily routines. With an average 4.7 ⭐️ rating, and 10+ million cups served to a steadily growing 100K customer base, Rasa is THE premier coffee alternative (and way to energize!) of the future...<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/7e40f41c-c52e-4fb9-929d-5aae4ae17c82/-/preview/" data-image="7e40f41c-c52e-4fb9-929d-5aae4ae17c82" src="https://ucarecdn.com/7e40f41c-c52e-4fb9-929d-5aae4ae17c82/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/a8490b11-785b-46a7-a5c2-e1d5812f1791/-/preview/" data-image="a8490b11-785b-46a7-a5c2-e1d5812f1791" src="https://ucarecdn.com/a8490b11-785b-46a7-a5c2-e1d5812f1791/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>We’ve been featured in numerous publications (all organic—no PR agency or paid placements!), and we’re rapidly expanding our reach beyond our thriving online direct-to-consumer channel. People love us.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/db820c18-c6ec-4ea7-9815-c0b43f76d6cd/-/preview/" data-image="db820c18-c6ec-4ea7-9815-c0b43f76d6cd" src="https://ucarecdn.com/db820c18-c6ec-4ea7-9815-c0b43f76d6cd/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><figure><img loading="lazy" ucare-src="https://ucarecdn.com/ca4ac8d5-a361-4632-b8f3-db8e037e113f/-/preview/" data-image="ca4ac8d5-a361-4632-b8f3-db8e037e113f" src="https://ucarecdn.com/ca4ac8d5-a361-4632-b8f3-db8e037e113f/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>Satisfying surging consumer demand, functional food and beverage disruptors are earning sky-high valuations.<br></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/ea0f2187-9e4e-4a03-a4c0-2057c12232c6/-/preview/" data-image="ea0f2187-9e4e-4a03-a4c0-2057c12232c6" src="https://ucarecdn.com/ea0f2187-9e4e-4a03-a4c0-2057c12232c6/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>We want to crowd-source this business, not just crowdfund it. We keep our valuation reasonable because we are here to share our future with our community, not extract from our community. We want you to join us and be part of  this entrepreneurial ride of a lifetime—having fun, generating impact, and hopefully making fat stacks in the process. 🤑 </p><p>We invite you to introduce us to influencers online, and B2B clients such as coffee shops, offices, apothecaries, and healthcare practitioners. Vote on our next seasonal blend, and on our upcoming re-brand. Help us build your business! <strong></strong><strong><br></strong></p><figure><img loading="lazy" ucare-src="https://ucarecdn.com/8633b1f8-237c-4500-8828-ea78780bc923/-/preview/" data-image="8633b1f8-237c-4500-8828-ea78780bc923" src="https://ucarecdn.com/8633b1f8-237c-4500-8828-ea78780bc923/-/format/auto/-/quality/smart/-/preview/" class="blink-fade-in"></figure><p>This is only the beginning of our journey to becoming a world-renowned functional coffee alternative &amp; changing the way we energize from depleting to nourishing. We are going to harness the everliving-crap out of our momentum and market Rasa to the world. Your investment dollars are part of a movement that will change how the world relates to energy. Join us!<br></p><p><br><br></p>
+  </div>
+
+
+
+ <!-- DOWNLOADS -->
+    <hr>
+    <h3 class="h4 mb-8">Downloads</h3>
+      <ul>
+      <span class="fa fa-file-pdf-o"></span>
+        <li><a class="wf-link-inline" target="_blank" href="//d2qbf73089ujv4.cloudfront.net/uploads/company_attachment/file/56201-DKS5CSQLmhpHArmTPtlRoFoS/Rasa_s_story.pdf">
+              Rasa s story.pdf
+        </a></li>
+    </ul>
+
+
+
+
+
+
+<script>
+
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+  //this is a hack for old pre-2021 content to make resposnive iframes
+
+   $(function () {
+    responsiveVideos()
+    window.onresize = responsiveVideos;
+   });
+
+function responsiveVideos() {
+  var $allVideos = $(".js-story").find("iframe"),
+
+  newWidth = parseInt($(".js-story").width())
+  
+    // Resize all videos according to their own aspect ratio
+    $allVideos.each(function() {
+      var $el = $(this);
+      $el
+        .width(newWidth)
+        .height(newWidth * .5625);
+    });
+}
+  });
+</script>
+
+        </div>
+      </div>
+    </div>
+  
+  
+  <!-- MOBILE-ONLY BOTTON MENU -->
+  <div id="js-mobile-menu" class="flex bg-coolgray-50  z-50  w-full fixed sm:hidden bottom-0   border-t   wf-animate-transition h-24 ">
+    <div class="text-sm flex items-center text-coolgray-700 ml-2 xs:ml-4 mr-4 font-medium w-full">
+      <div id="js-mobile-active" class="whitespace-nowrap" onclick="$(this).hide(); $('#js-mobile-page').show(); $('#js-mobile-invest').toggle(); $('#js-mobile-menu').addClass('h-auto').removeClass('h-14');">
+        <!-- HIGHTLIGHTS / TEAM/ STORY -->
+          Overview
+        <span class="ml-1 fa fa-angle-down"></span></div>
+      <div id="js-mobile-page" class="hidden relative w-full">
+       <div class="absolute right-0 mt-2 "><span onclick="closeMobileMenu()" class="fa fa-close text-4xl"></span></div>
+        <div class="space-y-10 mt-6 pb-6">
+          <div>
+              <div data-val="Overview" onclick="swapMobileMenu(this)">Overview</div>
+          </div>
+             <div>
+              <div data-val="Details" onclick="swapMobileMenu(this)">Details</div>
+            </div>
+          <div>
+            <div data-val="Updates" onclick="swapMobileMenu(this)">Updates</div>
+          </div>
+          <div>
+            <div data-val="What They Say" onclick="swapMobileMenu(this)">What People Say</div>
+          </div>
+          <div>
+            <div data-val="Ask a Question" onclick="swapMobileMenu(this)">Ask a Question</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="js-mobile-invest" class="flex-grow flex-row justify-end text-right flex items-center ">
+      <div class="mr-4">
+        <div data-react-class="shared/wf_company_follow/wf_company_follow" data-react-props="{&quot;companyId&quot;:89899,&quot;initialState&quot;:null,&quot;loggedInState&quot;:false,&quot;type&quot;:&quot;icon&quot;,&quot;iconSize&quot;:24,&quot;customClass&quot;:&quot;&quot;}" data-react-cache-id="shared/wf_company_follow/wf_company_follow-0"></div>
+      </div>
+          <div class="mx-5">
+              <div data-react-class="company_profile/wf_mobile_invest_button/wf_mobile_invest_button" data-react-props="{&quot;companySlug&quot;:&quot;rasa&quot;,&quot;minPurchase&quot;:&quot;$100&quot;,&quot;maxPurchase&quot;:&quot;$9&quot;,&quot;ttw&quot;:false,&quot;companyName&quot;:&quot;Rasa&quot;}" data-react-cache-id="company_profile/wf_mobile_invest_button/wf_mobile_invest_button-0"></div>
+          </div>
+    </div>
+  </div>
+
+    <div id="js-bottom-for-fixed-scroll"></div>
+    <script>
+      function tabSwitch(e) {
+        document.dispatchEvent(new CustomEvent("company-profile-tab-switch", {
+          detail: { id: e.id }
+        }))
+      }
+
+      function panelVideoClicked() {
+        window.history.pushState({}, '', `${window.location.href.split('?investor_panel')}?investor_panel=true`);
+        $('#js-video2').addClass('active'); 
+        $('#js-video1').removeClass('active'); 
+        $('#js-pitch-video').hide(); 
+        $('#js-panel-video').show()
+      }
+
+      function pitchVideoClicked() {
+        window.history.pushState({}, '', `${window.location.href.split('?investor_panel')[0]}`);
+         $("#js-video1").addClass('active'); 
+         $('#js-video2').removeClass('active'); 
+         $('#js-pitch-video').show(); 
+         $('#js-panel-video').hide();
+      }
+
+      window.addEventListener('DOMContentLoaded', (event) => {
+        $(function () {
+      
+
+          //this positions the sidebar to the left at the same height as the video by default
+      
+          setPosVars();
+          setTimeout("setPosVars();",100);
+          setTimeout("setPosVars();",2000);
+      
+      
+          window.onresize = setPosVars;
+      
+      
+          window.onscroll = updateSidebar;
+      
+          //too jerky
+         // window.addEventListener('scroll', throttle(updateSidebar, 50));
+
+          document.addEventListener("2021-modal-opened", () => {
+            $("#js-desktop-menu").css("z-index", "-1")
+            $("#js-video").css("z-index", "-1")
+          });
+          document.addEventListener("2021-modal-closed", () => {
+            $("#js-desktop-menu").css("z-index", "50")
+            $("#js-video").css("z-index", "unset")
+          });
+
+
+
+          var imgs = document.images,
+              len = imgs.length,
+              counter = 0;
+
+          [].forEach.call( imgs, function( img ) {
+              if(img.complete)
+                incrementCounter();
+              else
+                img.addEventListener( 'load', incrementCounter, false );
+          } );
+
+          function incrementCounter() {
+              counter++;
+              if ( counter === len ) {
+                 setPosVars();
+              }
+          }
+
+
+
+
+
+
+
+          
+        });
+      });
+      
+      
+      
+      
+      
+         function updateSidebar() {
+      
+      
+      
+            //no menu on mobile
+            if ($(window).width() < 500) {
+              return;
+            }
+      
+      
+      
+            var scrolltop = $(window).scrollTop() // same as pageYOffset
+      
+            //TOPMENU
+
+            if (scrolltop > startMenuOffset) {
+              $("#js-desktop-menu").css("position","fixed");
+              $("#js-desktop-menu").css("left",leftMenuOffset+"px");
+              $("#js-desktop-menu").css("top","-32px");
+              $("#js-highlights").css("padding-top","100px");
+      
+              if ((scrolltop + height) > initialBottom) {
+                  var margintop = initialBottom - scrolltop - height;
+                  $("#js-desktop-menu").css("top",margintop+"px");
+              }
+            } else {
+              $("#js-desktop-menu").css("position","relative");
+              $("#js-desktop-menu").css("left","auto");
+              $("#js-desktop-menu").css("top","0px");
+              $("#js-highlights").css("padding-top","0px");
+            }
+      
+      
+            //SIDEBAR
+            //no fixed sidebar on mobile
+            if ($(window).width() < 1024) {
+              return;
+            }
+      
+      
+            if (scrolltop > startOffset-60) {
+              $("#js-sidebar").css("position","fixed");
+              $("#js-sidebar").css("left",leftOffset+"px");
+              $("#js-sidebar").css("top","60px");
+              if ((scrolltop + height) > initialBottom) {
+                  var margintop = initialBottom - scrolltop - height;
+                  $("#js-sidebar").css("top",margintop+"px");
+              }
+            } else {
+              $("#js-sidebar").css("position","absolute");
+              $("#js-sidebar").css("left","auto");
+              $("#js-sidebar").css("right","16px");
+             $("#js-sidebar").css("top",video_pos+"px");
+            }
+      
+        }
+      
+      
+      
+        function throttle(fn, wait) {
+          var time = Date.now();
+          return function() {
+            if ((time + wait - Date.now()) < 0) {
+              fn();
+              time = Date.now();
+            }
+          }
+        }
+      
+      
+        function swapMobileMenu(option) {
+      
+          value = $(option).attr("data-val")
+      
+          $('#js-mobile-invest').toggle();
+      
+          $('#js-mobile-active').html(value + ' <span class="ml-1 fa fa-angle-down"></span>');
+      
+          $('#js-mobile-active').show(); $('#js-mobile-page').hide(); $('#js-mobile-menu').removeClass('h-auto').addClass('h-14');
+        
+          switch (value) {
+            case "Overview":
+              document.getElementById("overview-tab").click()
+              break
+            case "Details":
+              document.getElementById("details-tab").click()
+              break
+            case "Updates":
+              document.getElementById("updates-tab").click()
+              break
+            case "What They Say":
+              document.getElementById("buzz-tab").click()
+              break
+            case "Ask a Question":
+              document.getElementById("ask-tab").click()
+          }
+        }
+      
+        
+        function closeMobileMenu() {
+          $('#js-mobile-invest').toggle();
+          $('#js-mobile-active').show(); $('#js-mobile-page').hide(); $('#js-mobile-menu').removeClass('h-auto').addClass('h-14');
+        }
+      
+      
+        function checkSidebarHeight() {
+      
+          if ($(window).width() < 1024) {
+            return;
+          }
+          $("#js-sidebar-height").css("height","auto")
+      
+          //lets users scoll sidebar when fixed position when viewport too short
+          if ($("#js-sidebar").height() > $(window).height() ) {
+            $("#js-sidebar-height").css("height",$(window).height()-65+"px");
+          } else {
+            if ($("#js-sidebar").height() == $(window).height() - 65) {
+      
+            } else {
+              $("#js-sidebar-height").css("height","auto")
+            }
+          }
+        }
+            function setPosVars() {
+      
+      
+          //grab variables for menu
+          startMenuOffset = $("#js-start-menu").offset().top;
+          leftMenuOffset = $("#js-desktop-menu").position().left;
+      
+      
+          //SIDEBAR
+          //put sidebar on left aligned with video on desktop
+          $("#js-sidebar").show();
+          video_pos = $("#js-video").position().top;
+          $("#js-sidebar").css("top",video_pos)
+      
+      
+          //grab variables for sidebar
+          startOffset = $("#js-video").offset().top;
+          leftOffset = $("#js-sidebar").offset().left;
+      
+          initialTop = parseInt($("#js-video").position().top);
+          height  = parseInt($("#js-sidebar").height());
+          initialBottom = parseInt($("#js-bottom-for-fixed-scroll").position().top) - 260 ;
+          initialLeft = parseInt($("#js-sidebar").position().left);
+      
+          //correct sidebar positioning
+          if ($(window).width() < 1024) {
+            $("#js-sidebar").css("left","auto");
+            $("#js-sidebar").css("right","auto");
+            $("#js-sidebar").css("position","relative");
+            $("#js-sidebar").css("top","0");
+            $("#js-sidebar").css("max-width","42rem");
+            $("#js-sidebar").css("margin-left","auto");
+            $("#js-sidebar").css("margin-right","auto");
+          } else {
+            $("#js-sidebar").css("position","absolute");
+            $("#js-sidebar").css("top",video_pos);
+            $("#js-sidebar").css("left","auto");
+            $("#js-sidebar").css("right","16px");
+          }
+      
+          checkSidebarHeight()
+
+          updateSidebar();
+      
+      
+      
+        }
+
+
+
+
+    </script>
+
+        <div data-react-class="shared/wf_login_signup_form/wf_login_signup_form" data-react-props="{&quot;openOnEvent&quot;:&quot;2021-login-signup-required&quot;,&quot;successEventName&quot;:&quot;2021-user-session&quot;}" data-react-cache-id="shared/wf_login_signup_form/wf_login_signup_form-0"></div>
+  	  </main>
+
+
+
+
+<!--FOOTER-->
+
+  <footer>
+
+
+    <!--SIGNUP-->
+
+
+      <div class="fluid-container">
+        <hr class="mt-0">
+
+        <div class="flex flex-col lg:flex-row lg:ml-2">
+          <div class="flex-none mr-4 xl:mr-12 ">
+            <div class="flex-col lg:flex-row  flex ">
+              <div class="flex-none">
+                <a href="/pbc" aria-label="PBC"><img class="h-18 w-18 mb-2x  md:h-20 md:w-20 lg:h-24 lg:w-24 bg-cover mx-auto lg:mx-0" alt="" src="https://wefunder-production.s3.amazonaws.com/2021/w-blue.svg"></a>
+              </div>
+              
+              <div class="flex-grow lg:ml-8 mt-3 text-sm lg:text-base text-center lg:text-left lg:mt-1">
+                <div class="font-sm lg-font-base font-medium leading-7">
+                  Wefunder is a Public Benefit Corporation.<br>
+                  We’re here to fix capitalism.<br>
+                </div>
+                <a href="/pbc">
+                  <button class="mt-4 wf-btn-blue-o px-6 py-2 lg:px-12 lg:py-4 mb-8 lg:mb-0">2012-2021 IMPACT REPORT</button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="flex-grow -mt-0.5">
+
+               <div class="flex justify-between sm:justify-around text-xs sm:text-sm">
+
+                  <div class="">
+                    <ul class="wf-link-nav">
+                      <li class="py-3"><a href="/wefunder">Our Story</a></li>
+                      <li class="py-3"><a href="/jobs">Jobs</a></li>
+                      <li class="py-3"><a href="/blog">Blog</a></li>
+                      <li class="py-3"><a href="/press">Press</a></li>
+                      <li class="py-3"><a href="/scout">Get $2500</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="">
+                    <ul class="wf-link-nav">
+                      <li class="py-3"><a href="https://help.wefunder.com/">Investor FAQ</a></li>
+                      <li class="py-3"><a href="https://help.wefunder.com/#/founder">Founder FAQ</a></li>
+                      <li class="py-3"><a href="https://help.wefunder.com/#/guide">Guides</a></li>
+                      <li class="py-3"><a href="https://help.wefunder.com/">Support</a></li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <ul class="wf-link-nav">
+                      <li class="py-2 pt-3 flex ">
+                        <a target="_blank" rel="noopener noreferrer" aria-label="Apple App Store" href="https://apps.apple.com/app/wefunder/id1534355560"><div class="fa fa-apple mr-1.5  -mt-1 -mt-2 text-2xl hover:no-underline"></div></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/app/wefunder/id1534355560">App Store</a>
+                      </li>
+                      <li class="py-3 flex ">
+                         <a target="_blank" rel="noopener noreferrer" aria-label="Google Play Store" href="https://play.google.com/store/apps/details?id=com.wefunder.android"><div class="fa fa-android mr-1 -mt-2 text-2xl hover:no-underline"></div> </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.wefunder.android">Google Play</a>
+                      </li>
+                    </ul>
+                  </div>
+               </div>
+
+            </div>
+          </div>
+      
+
+        <div>
+          <hr class="mb-6">
+          <div class="flex flex-col-reverse sm:flex-row lg:ml-2 font-light">
+            <div class="flow-grow text-xs lg:text-sm leading-5 text-gray-600 max-w-xl lg:max-w-2xl  mr-4">
+              <p>Wefunder means Wefunder Inc and its wholly owned subsidiaries: Wefunder Advisors LLC and Wefunder Portal LLC. This page is hosted by 
+                  Wefunder Portal LLC.
+
+              </p>
+
+
+
+                  <p class="mt-5">Wefunder Portal LLC is a member of the <a class="wf-link-inline-muted" target="_blank" rel="noopener noreferrer" href="https://www.finra.org/about/firms-we-regulate/funding-portals-we-regulate">Financial Industry Regulatory Authority</a><span class="hidden lg:inline-block">&nbsp;(FINRA)</span>. <span class="inline-block">Investing on</span> Wefunder is risky. Don’t invest more than you can afford to lose. </p>
+            </div>
+
+            <div class="flex justify-between sm:block sm:flex-grow  mb-4 sm:mb-0 text-left sm:text-right  -mt-2 text-2xl  mr-0 lg:mr-12">
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Facebook" href="https://www.facebook.com/wefunder"><span class="fa fa-facebook-square p-3 sm:p-2 wf-link-lightgray"></span></a>
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Twitter" href="https://twitter.com/wefunder"><span class="fa fa-twitter-square p-3 sm:p-2 wf-link-lightgray"></span></a>
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Linkedin" href="https://www.linkedin.com/company/3229238/admin/"><span class="fa fa-linkedin p-3 sm:p-2 wf-link-lightgray"></span></a>
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Youtube" href="https://www.youtube.com/Wefunder"><span class="fa fa-youtube-square p-3 sm:p-2 wf-link-lightgray"></span></a>
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Instagram" href="https://www.instagram.com/wefunder/"><span class="fa fa-instagram p-3 sm:p-2 wf-link-lightgray"></span></a>
+              <a target="_blank" rel="noopener noreferrer" aria-label="Wefunder's Podcast on Apple" href="https://podcasts.apple.com/us/podcast/adventure-capital-equity-crowdfunding/id1468541404"><span class="fa fa-podcast p-3 sm:p-2 wf-link-lightgray"></span></a>
+            </div>
+          </div>
+
+          <div class="flex text-xs text-gray-500 mt-4 mb-8 flex-col sm:flex-row lg:ml-2">
+            <div class="flex-grow -ml-2 flex flex-col xs:flex-row">
+              <div data-react-class="shared/wf_modal/wf_modal" data-react-props="{&quot;customModalTriggerHtml&quot;:&quot;\n                    \u003cbutton class=\&quot;wf-btn-lightgray-flat text-xs px-2\&quot;\u003eIMPORTANT DISCLOSURES\u003c/button\u003e\n                &quot;,&quot;defaultSize&quot;:&quot;md&quot;,&quot;html&quot;:&quot;\u003cdiv class=\&quot;prose-lg  text-black font-reading\&quot;\u003e\n  \u003ch1\u003eDisclosures\u003c/h1\u003e\n\n  \u003cp\u003ewefunder.com is a website owned by Wefunder Inc., the parent company of Wefunder Advisors LLC and Wefunder Portal LLC.  Wefunder Inc. operates sections of wefunder.com where certain Regulation D and Regulation A+ offerings are available. Wefunder Inc. is not regulated in any capacity, is not registered as either a broker-dealer or funding portal, and is not a member of FINRA or any other self-regulatory organization.\u003c/p\u003e\n\n  \u003cp\u003eWefunder Advisors is an exempt reporting adviser that makes filings with the SEC and certain states.  Wefunder Advisors advises special purpose vehicles (SPVs) used in certain Regulation D offerings that are available on wefunder.com. \u003cp\u003e\n\n  \u003cp\u003eWefunder Portal is a funding portal (CRD #283503) that is registered with the SEC and is a member of FINRA.  Wefunder Portal operates sections of wefunder.com where certain Regulation Crowdfunding offerings are available. \u003c/p\u003e\n\n  \u003cp\u003eBy using wefunder.com, you accept our \u003cA class=\&quot;wf-link-inline\&quot; href=\&quot;/terms\&quot;\u003eTerms\u003c/a\u003e \u0026 \u003ca class=\&quot;wf-link-inline\&quot; href=\&quot;/terms#privacy\&quot;\u003ePrivacy Policy\u003c/a\u003e. If investing, you accept our \u003ca href=\&quot;/terms#investor\&quot;\u003eInvestor Agreement\u003c/a\u003e. You may also view our \u003ca target=\&quot;_blank\&quot; class=\&quot;wf-link-inline\&quot; href=\&quot;https://wefunder-production.s3.amazonaws.com/static/privacy_notice.pdf\&quot;\u003ePrivacy Notice\u003c/a\u003e. \u003c/p\u003e\n\n  \u003cp\u003eAll investments involve risks, including possible loss of capital. \u003c/p\u003e\n\u003c/div\u003e\n&quot;}" data-react-cache-id="shared/wf_modal/wf_modal-0"></div>
+
+              <a href="/terms"><button class="wf-btn-lightgray-flat text-xs px-2">TERMS</button></a>
+              <a href="https://wefunder.com/terms#privacy"><button class="wf-btn-lightgray-flat text-xs px-2">PRIVACY</button></a>
+            </div>
+
+            <div class="flex-none lg:mr-14 mt-4  sm:my-0 sm:-mt-1 text-left mb-6">
+              <select class="text-xs w-24 p-2">
+                <option>English</option>
+                <option>Spanish</option>
+              </select>
+            </div>
+            
+          </div>
+
+
+  </div></div></footer>
+
+
+
+  
+
+
+
+
+
+</body></html>
